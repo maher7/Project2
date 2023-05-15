@@ -1,0 +1,21 @@
+<h1 id="tableLabel"></h1>
+
+<p>This component demonstrates fetching data from the server.</p>
+
+<p *ngIf="!validEmail"><em>Loading...</em></p>
+
+  <input #inputEmail type="text" ngModel required />
+  <button type="submit" class="btn btn-primary" (click)="fetchEmailRecieved(inputEmail.value)"
+         >
+    valid email
+  </button>
+
+  <div>{{validEmail.email}} = {{validEmail.date}}</div>
+
+ <!-- <form [formGroup]="emailValidationForm" (ngSubmit)="onSubmit()">
+    <label for="email">Email</label>
+    <input type="text" class="form-control"
+           id="email" formControlName="email">
+
+    <button class="btn btn-primary" [disabled]="signupForm?.invalid" type="submit">Submit</button>
+    </form>-->
